@@ -1,77 +1,63 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
   
   <title>Hexo</title>
+  <meta name="author" content="John Doe">
+  
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <meta property="og:site_name" content="Hexo"/>
+
   
+    <meta property="og:image" content="undefined"/>
   
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
 
 </head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
   
-    <article id="post-JS初步实践" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/21/JS初步实践/" class="article-date">
-  <time datetime="2016-07-21T07:49:42.300Z" itemprop="datePublished">2016-07-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-07-21T07:49:42.300Z"><a href="/2016/07/21/JS初步实践/">2016-07-21</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2016/07/21/JS初步实践/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
       
         <p>title: js-2.8   //在此处添加你的标题。<br>date: 2016/7/21   //在此处输入你编辑这篇文章的时间。<br>categories: js实践   //在此处输入这篇文章的分类。<br>toc: true  //在此处设定是否开启目录，需要主题支持。<br>&lt;!DOCTYPE html&gt;</p>
 <html lang="en"><br><head><br>    <meta charset="UTF-8"><br>    <title>简单JS年历</title><br>    <style type="text/css"><br>    body,ul,li.h2,p{margin: 0;padding: 0}<br>    body{font:12px/1.5 Tahoma;}<br>    #box{width: 248px;overflow: hidden;zoom: 1;background: #eaeaea;margin: 20px auto;padding:0 0 10px 10px;}<br>    #box ul{overflow: hidden;zoom:1;}<br>    #box li{float: left;color: #fff;width: 40px;height: 40px;cursor: pointer;font-size: 14px;text-align: center;background: #342D2D;list-style-type: none;border: 1px solid #000;margin: 0 10px 10px 0; padding: 5px;line-height: 1.3}<br>    #box li.cuu{background: #fff;color: #EF9FCF;}<br>    #box li strong{display: block;font-size: 18px;}<br>    #note{color: ##393737;background: #fff;margin: 10px;}<br>    #note h2{font-size: 14px}<br>    </style><br>    <script type="text/javascript"><br>    window.onload=function()<br>    {<br>        var one=document.getElementById(“box”).getElementsByTagName(“li”);<br>        //var one=document.getElementById(‘box’).getElementsByName(‘li’);<br><br>        var two=document.getElementById(‘note’);<br>        var op=two.getElementsByTagName(“p”)[0];<br>        var strong=two.getElementsByTagName(‘strong’)[0];<br>        var oArray=[<br>        “元旦：1月1日至3日放假三天。”,<br>        “春节：2月2日至8日放假7天。”,<br>        “妇女节：3月8日妇女节，与我无关。”,<br>        “清明节：4月3日至5日放假3天”,<br>        “劳动节：4月30日至5月2日放假3天。”,<br>        “端午节：6月4日至6日放假3天。”,<br>        “小暑：7月7日小暑。不放假。”,<br>        “七夕节：8月6日七夕节。不放假。”,<br>        “中秋节：9月10日至12日放假3天。”,<br>        “国庆节：10月1日至7日放假7天。”,<br>        “立冬：11月8日立冬。不放假。”,<br>        “艾滋病日:12月1日<br />废除奴隶制国际日:12月2日。”<br>        ]<br>        for(var i=0;i<one.length;i++)
@@ -91,38 +77,34 @@
     </script><br></head><br><body><br>    <div id="box"><br>        <ul><br>            <li><strong>1</strong>JAN</li><br>            <li><strong>2</strong>FER</li><br>            <li><strong>3</strong>MAR</li><br>            <li><strong>4</strong>APR</li><br>            <li><strong>5</strong>MAY</li><br>            <li class="cuu"><strong>6</strong>JUN</li><br>            <li><strong>7</strong>JUL</li><br>            <li><strong>8</strong>AUG</li><br>            <li><strong>9</strong>SEP</li><br>            <li><strong>10</strong>OCT</li><br>            <li><strong>11</strong>NOV</li><br>            <li><strong>12</strong>DEC</li><br>        </ul><br>        <div id="note"><br>            <h2><br>            <strong>6</strong><br>            月节日<br>            </h2><br>            <p>端午节：6月4日至6日放假3天。</p><br>        </div><br>    </div><br></body><br></html>
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/21/JS初步实践/" data-id="ciqw5m7rm00000wlaq6pt30w1" class="article-share-link">Partager</a>
+    <footer>
       
+        
+        
       
+      <div class="clearfix"></div>
     </footer>
   </div>
-  
 </article>
 
 
+
+
+  <article class="post">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/20/hello-world/" class="article-date">
-  <time datetime="2016-07-20T09:02:23.135Z" itemprop="datePublished">2016-07-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-07-20T09:02:23.135Z"><a href="/2016/07/20/hello-world/">2016-07-20</a></time>
+      
+      
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/20/hello-world/">Hello World</a>
-    </h1>
+    <h1 class="title"><a href="/2016/07/20/hello-world/">Hello World</a></h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+    </header>
+    <div class="entry">
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
@@ -136,90 +118,59 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/20/hello-world/" data-id="ciqw5m7se00010wlazla727ze" class="article-share-link">Partager</a>
+    <footer>
       
+        
+        
       
+      <div class="clearfix"></div>
     </footer>
   </div>
-  
 </article>
 
 
-  
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li></ul>
-    </div>
-  </div>
 
 
+
+<nav id="pagination">
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/07/21/JS初步实践/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2016/07/20/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
 
   
 </aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+    <div class="clearfix"></div>
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+  <footer id="footer" class="inner"><div class="alignleft">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+  &copy; 2016 John Doe
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
 
 
-<script src="/js/script.js"></script>
 
-  </div>
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
 </body>
 </html>
