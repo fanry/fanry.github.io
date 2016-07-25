@@ -51,6 +51,39 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2016-07-25T05:44:38.092Z"><a href="/2016/07/25/记大一第一周学习总结/">2016-07-25</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2016/07/25/记大一第一周学习总结/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>##</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2016-07-21T07:49:42.300Z"><a href="/2016/07/21/JS初步实践/">2016-07-21</a></time>
       
       
@@ -61,22 +94,135 @@
     </header>
     <div class="entry">
       
-        <p>title: js-2.8   //在此处添加你的标题。<br>date: 2016/7/21   //在此处输入你编辑这篇文章的时间。<br>categories: js实践   //在此处输入这篇文章的分类。<br>toc: true  //在此处设定是否开启目录，需要主题支持。<br>&lt;!DOCTYPE html&gt;</p>
-<html lang="en"><br><head><br>    <meta charset="UTF-8"><br>    <title>简单JS年历</title><br>    <style type="text/css"><br>    body,ul,li.h2,p{margin: 0;padding: 0}<br>    body{font:12px/1.5 Tahoma;}<br>    #box{width: 248px;overflow: hidden;zoom: 1;background: #eaeaea;margin: 20px auto;padding:0 0 10px 10px;}<br>    #box ul{overflow: hidden;zoom:1;}<br>    #box li{float: left;color: #fff;width: 40px;height: 40px;cursor: pointer;font-size: 14px;text-align: center;background: #342D2D;list-style-type: none;border: 1px solid #000;margin: 0 10px 10px 0; padding: 5px;line-height: 1.3}<br>    #box li.cuu{background: #fff;color: #EF9FCF;}<br>    #box li strong{display: block;font-size: 18px;}<br>    #note{color: ##393737;background: #fff;margin: 10px;}<br>    #note h2{font-size: 14px}<br>    </style><br>    <script type="text/javascript"><br>    window.onload=function()<br>    {<br>        var one=document.getElementById(“box”).getElementsByTagName(“li”);<br>        //var one=document.getElementById(‘box’).getElementsByName(‘li’);<br><br>        var two=document.getElementById(‘note’);<br>        var op=two.getElementsByTagName(“p”)[0];<br>        var strong=two.getElementsByTagName(‘strong’)[0];<br>        var oArray=[<br>        “元旦：1月1日至3日放假三天。”,<br>        “春节：2月2日至8日放假7天。”,<br>        “妇女节：3月8日妇女节，与我无关。”,<br>        “清明节：4月3日至5日放假3天”,<br>        “劳动节：4月30日至5月2日放假3天。”,<br>        “端午节：6月4日至6日放假3天。”,<br>        “小暑：7月7日小暑。不放假。”,<br>        “七夕节：8月6日七夕节。不放假。”,<br>        “中秋节：9月10日至12日放假3天。”,<br>        “国庆节：10月1日至7日放假7天。”,<br>        “立冬：11月8日立冬。不放假。”,<br>        “艾滋病日:12月1日<br />废除奴隶制国际日:12月2日。”<br>        ]<br>        for(var i=0;i<one.length;i++)
-        {
-            one[i].num=i;
-            one[i].onmouseover=function()
-            {
-                for(var n=0;n<one.length;n++)
-                one[n].className="";
-                this.className="cuu";
-                op.innerHTML=oArray[this.num];
-                strong.innerHTML=this.num+1;
-            }
-        }
+        <h1 id="记大一第一周学习总结"><a href="#记大一第一周学习总结" class="headerlink" title="记大一第一周学习总结"></a>记大一第一周学习总结</h1><hr>
+<ul>
+<li>JS高级程序设计第六章面向对象的程序设计复习与学习</li>
+<li>JSON简单了解</li>
+<li>使用Github Pages建立独立博客</li>
+<li>一些小的JS练习</li>
+</ul>
+<h2 id="一-JS高级程序设计第六章面向对象的程序设计复习与学习"><a href="#一-JS高级程序设计第六章面向对象的程序设计复习与学习" class="headerlink" title="一. JS高级程序设计第六章面向对象的程序设计复习与学习"></a>一. JS高级程序设计第六章面向对象的程序设计复习与学习</h2><hr>
+<ul>
+<li>理解对象</li>
+<li>创建对象</li>
+<li>继承</li>
+</ul>
+<p><strong>理解对象</strong></p>
+<blockquote>
+<p>无序属性的集合，其属性可以包含基本值，对象或者函数。相当于说对象是一组没有特定顺序的值。对象的每个属性或方法都有一个名字，而每个名字都映射到一个值。</p>
+</blockquote>
+<p>【<strong>例</strong>】</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person =&#123;</div><div class="line">name:<span class="string">"Lily"</span>,</div><div class="line">age: <span class="number">29</span>,</div><div class="line">job: <span class="string">"teacher"</span>,</div><div class="line">sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p><strong>对象中属性类型</strong></p>
+<ul>
+<li>属性类型分为数据属性和访问器属性<br>1.数据属性<ul>
+<li>[[Configurable]] （<strong>若将此属性设置为false则再也不能逆转</strong>）</li>
+<li>[[Errumerable]]</li>
+<li>[[Writable]]</li>
+<li>[[Value]]</li>
+</ul>
+</li>
+</ul>
+<p>修改属性默认的特性，需要使用ECMAScript5的<strong>Object.defineProperty()</strong>方法。</p>
+<p>【<strong>例</strong>】<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.defineProperty(person,<span class="string">"name"</span>,&#123;</div><div class="line">Writable:<span class="literal">false</span>,</div><div class="line">Value:<span class="string">"Lucy"</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p> 2.访问器属性</p>
+<ul>
+<li>[[Configurable]] </li>
+<li>[[Enumerable]]</li>
+<li>[[Get]]</li>
+<li>[[Set]]</li>
+</ul>
+<p>同样需要<strong>Object.defineProperty()</strong>方法。</p>
+<blockquote>
+<p>访问器属性不包含数据值；<br>使用访问器属性的常见方式：设置一个属性的值会导致其他属性发生变化。</p>
+</blockquote>
+<hr>
+<ul>
+<li>定义多个属性<br>方法为<strong>Object.defineProperties()</strong></li>
+</ul>
+<hr>
+<ul>
+<li><p>读取属性的特性<br>使用<strong>Object.getOwnPropertyDescriptor()</strong>方法。</p>
+<hr>
+<h1 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h1></li>
+</ul>
+<ul>
+<li><h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">name,age,job</span>)</span>&#123;</div><div class="line">   <span class="keyword">var</span> o=<span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">   o.name=name;</div><div class="line">   o.age=age;</div><div class="line">   o.job=job;</div><div class="line">   o.sayName()=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;;</div><div class="line"><span class="keyword">return</span> o;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解决了创建多个相似对象的问题，但未解决对象识别问题（如何知道一个对象的类型）</p>
+<ul>
+<li><h3 id="构造函数模式"><a href="#构造函数模式" class="headerlink" title="构造函数模式"></a>构造函数模式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age,job</span>)</span>&#123;</div><div class="line">   <span class="keyword">this</span>.name=name;</div><div class="line">   <span class="keyword">this</span>.age=age;</div><div class="line">   <span class="keyword">this</span>.job=job;</div><div class="line">   <span class="keyword">this</span>.sayName()=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>构造函数始终应该以一个<strong>大写字母</strong>开头<br>每个方法都要在每个实例上重新创建一遍<br>以这种方式创建函数，会导致不同的作用域链和标识符解析，但创建function新实例的机制是相同的<br>新实例可能会完成相同的任务，这是没有必要的</p>
+<ul>
+<li><p>###原型模式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</div><div class="line">&#125;</div><div class="line">  Person.prototype.name=<span class="string">"Lily"</span>;</div><div class="line">  Person.prototype.age=age;</div><div class="line">  Person.prototype.job=job;</div><div class="line">  Person.prototype.sayName()=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> person1=<span class="keyword">new</span> Person();</div><div class="line">person1.sayName();<span class="comment">//"Lily"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>每个我们创建的函数都有一个prototype（原型）属性。</p>
+</li>
+<li>这个属性是一个指针，指向一个对象，这个对象用来包含可以由特定类型的所有实例共享的属性和方法。</li>
+<li>prototype是通过构造函数二创建的那个对象实例的原型对象。</li>
+<li>原型最初只包含constructor属性。</li>
+<li>可以通过对象实例访问保存在原型中的值，<strong>不能通过对象实例重写原型中的值</strong></li>
+<li>可以使用<strong>hasOwnProperty()</strong>方法判断什么时候访问的是实例属性，什么时候是原性属性。</li>
+<li>原型模式的<strong>不便</strong>之处在于当未定义实例属性时，修改其中一个实例的属性值，原型属性也会随之更改，故所有未定义的实例属性值也随之更改。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/2548719-3be1b9e848b03609.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>此图便于了解创建函数Foo，Foo函数原型propertype，以及propertype中constructor属性中的指针所指的东西。</p>
+<hr>
+<h4 id="简化书写原型"><a href="#简化书写原型" class="headerlink" title="简化书写原型"></a>简化书写原型</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</div><div class="line">&#125;</div><div class="line">  Person.prototype=&#123;</div><div class="line"> <span class="keyword">constructor</span>：Person,</div><div class="line"> name:"Lily"，</div><div class="line"> age=29，</div><div class="line"> job="teacher“，</div><div class="line"> sayName()=function()&#123;</div><div class="line">        alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;</div><div class="line">&#125;；</div></pre></td></tr></table></figure>
+<p><strong>创建实例时，假如用简化书写重新写了原型以后，实例的Prototype依旧是最初的原型。但是构造函数中的Prototype指向的是新的原型。</strong></p>
+<hr>
+<ul>
+<li><h3 id="组合使用构造函数模式和原型模式"><a href="#组合使用构造函数模式和原型模式" class="headerlink" title="组合使用构造函数模式和原型模式"></a>组合使用构造函数模式和原型模式</h3><p>（<strong><em>创建自定义类型最常见的方式</em></strong>）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age,job</span>)</span>&#123;</div><div class="line">   <span class="keyword">this</span>.name=name;</div><div class="line">   <span class="keyword">this</span>.age=age;</div><div class="line">   <span class="keyword">this</span>.job=job;</div><div class="line">   <span class="keyword">this</span>.friends=[<span class="string">"one"</span>,<span class="string">"two"</span>];</div><div class="line">&#125;</div><div class="line">  Person.prototype=&#123;</div><div class="line"> <span class="keyword">constructor</span>：Person,</div><div class="line"> sayName:function()&#123;</div><div class="line">        alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>###动态原型模式、寄生构造函数模式、稳妥构造函数模式<br>（略）js高级程序设计P<strong><em>159，161</em></strong></p>
+</li>
+</ul>
+<hr>
+<h1 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h1><blockquote>
+<p>原型链基本概念：每个构造函数都有一个原型对象，原型对象都包含一个指向构造函数的指针，每个实例都包含一个指向原型对象内部的指针。<strong><em>让原型对象等于另一个类型的实例</em></strong>，则此时的原型对象包含一个指向另一个原型的指针，相应的，另一个原型中也包含一个指向另一个构造函数的指针。层层递进，构成实例与原型的链条。</p>
+</blockquote>
+<ul>
+<li>查找一个属性：如果这个属性在原型中没有查找到。那么，将会查找这个原型的原型，以此类推遍历整个原型链。若没找到，则返回undefined值。</li>
+</ul>
+<hr>
+<h2 id="二-JSON简单了解"><a href="#二-JSON简单了解" class="headerlink" title="二. JSON简单了解"></a>二. JSON简单了解</h2><hr>
+<blockquote>
+<p>JSON是JavaScript的一个严格的子集，利用了JavaScript中的一些模式来表示结构化数据。<br>JSON一般以字符串的形式在数据交互过程中游走，so对于js而言，如何将json字符串和js对象之间进行相互转换显得尤为重要。</p>
+</blockquote>
+<hr>
+<ul>
+<li><strong>语法</strong></li>
+</ul>
+<p>1.简单值<br><strong><em>js相同的语法，字符串，数值，布尔值，null（除了undefined,NAN）</em></strong></p>
+<p>2.对象<br>与js相比<strong><em>没有声明变量，没有末尾的分号，对象的属性必须加双引号</em></strong><br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">     <span class="attr">"name"</span>:<span class="string">"Lily"</span>,</div><div class="line">     <span class="attr">"age"</span>:<span class="number">29</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>3.数组<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">[<span class="number">25</span>,<span class="string">"hi"</span>,ture]</div></pre></td></tr></table></figure></p>
+<hr>
+<ul>
+<li><strong>JSON对象</strong></li>
+</ul>
+<p>1):eval大法（json字符串 -&gt; js对象）</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var jsonStr = '&#123;"name": "hanzichi", "sex": "male"&#125;';</div><div class="line">var ans = eval('(' + jsonStr + ')');</div><div class="line"></div><div class="line">console.log(ans.name, ans.sex); // hanzichi male&#125;</div></pre></td></tr></table></figure>
+<p>　　eval 函数非常快，但是它可以编译任何 javascirpt 代码，这样的话就可能产生安全的问题。eval 的使用是基于传入的代码参数是可靠的假设下，有一些情况下，可能客户端是不可信任的。如果基于安全的考虑的话，最好是使用一个JSON解析器，一个JSON 解析器将只接受JSON文本，所以是更安全的，如下。</p>
+<p>2):JSON.parse（json字符串 -&gt; js对象）<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var jsonStr = '&#123;"name": "hanzichi", "sex": "male"&#125;';</div><div class="line">var obj = JSON.parse(jsonStr);</div><div class="line">console.log(typeof obj, obj); </div><div class="line"></div><div class="line">// object Object &#123;name: "hanzichi", sex: "male"&#125;</div></pre></td></tr></table></figure></p>
+<p><strong><em>第二个参数可以是函数，可以对值进行删改：</em></strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var jsonStr = '&#123;"name": "hanzichi", "sex": "male", "age": 10&#125;';</div><div class="line">var obj = JSON.parse(jsonStr, function(key, value) &#123;</div><div class="line">if (key === 'name') &#123; </div><div class="line">return 'my name is ' + value;&#125;</div><div class="line">return value;&#125;);</div><div class="line">console.log(typeof obj, obj);</div><div class="line"> </div><div class="line">// object Object &#123;name: "my name is hanzichi", sex: "male", age: 10&#125;</div></pre></td></tr></table></figure></p>
+<p>3):JSON.stringify（js对象 -&gt; json字符串）</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;name: 'hanzichi', sex: 'male', age: '10'&#125;;</div><div class="line">var jsonStr = JSON.stringify(obj);</div><div class="line">console.log(jsonStr);  </div><div class="line"></div><div class="line">// &#123;"name":"hanzichi","sex":"male","age":"10"&#125;</div></pre></td></tr></table></figure>
+<p><strong><em>也可以加个参数，规定需要转化为json字符串的属性</em></strong>（数组形式，跟数组同名的js对象属性才会被转换）：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;name: 'hanzichi', sex: 'male', age: '10'&#125;;</div><div class="line">var jsonStr = JSON.stringify(obj, ['name']);</div><div class="line">console.log(jsonStr);  </div><div class="line"></div><div class="line">// &#123;"name":"hanzichi"&#125;</div></pre></td></tr></table></figure></p>
+<p><strong><em>第二个参数也可以是个函数，可以删选符合条件的属性</em></strong>（或者改变属性值，没有return表示放弃该属性，return的值表示该key在json字符串中的值）<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;name: 'hanzichi', sex: 'male', age: '10'&#125;;</div><div class="line">var jsonStr = JSON.stringify(obj, function(key, value) &#123;</div><div class="line">if(key === 'name') &#123;</div><div class="line"> return  'my name is ' + value;&#125;  </div><div class="line">return value;&#125;);</div><div class="line">console.log(jsonStr);  </div><div class="line"></div><div class="line">// &#123;"name":"my name is hanzichi","sex":"male","age":"10"&#125;</div></pre></td></tr></table></figure></p>
+<p><strong><em>还可以有第三个参数，可以是数字或者字符串。<br>如果是数字的话，表示缩进，数字大小超过10了按10处理。</em></strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;name: 'hanzichi', sex: 'male', age: '10'&#125;;</div><div class="line">var jsonStr = JSON.stringify(obj, null, 4);</div><div class="line">console.log(jsonStr); </div><div class="line"></div><div class="line">// &#123;</div><div class="line"></div><div class="line">//     "name": "hanzichi",</div><div class="line"></div><div class="line">//     "sex": "male",</div><div class="line"></div><div class="line">//     "age": "10"</div><div class="line"></div><div class="line">// &#125;</div></pre></td></tr></table></figure></p>
+<p><strong><em>也可以是字符串，会在属性前加上这些字符串充当前缀，同样字符串长度超过10只截取10：</em></strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;name: 'hanzichi', sex: 'male', age: '10'&#125;;</div><div class="line">var jsonStr = JSON.stringify(obj, null, 'pre');</div><div class="line">console.log(jsonStr); </div><div class="line"></div><div class="line">// &#123;</div><div class="line"></div><div class="line">// pre"name": "hanzichi",</div><div class="line"></div><div class="line">// pre"sex": "male",</div><div class="line"></div><div class="line">// pre"age": "10"</div><div class="line"></div><div class="line">// &#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>#三.使用Github Pages建立独立博客</p>
+<hr>
+<p>参考自<a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external"><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">Github Pages + Hexo</a></a></p>
 
-    }
-    </script><br></head><br><body><br>    <div id="box"><br>        <ul><br>            <li><strong>1</strong>JAN</li><br>            <li><strong>2</strong>FER</li><br>            <li><strong>3</strong>MAR</li><br>            <li><strong>4</strong>APR</li><br>            <li><strong>5</strong>MAY</li><br>            <li class="cuu"><strong>6</strong>JUN</li><br>            <li><strong>7</strong>JUL</li><br>            <li><strong>8</strong>AUG</li><br>            <li><strong>9</strong>SEP</li><br>            <li><strong>10</strong>OCT</li><br>            <li><strong>11</strong>NOV</li><br>            <li><strong>12</strong>DEC</li><br>        </ul><br>        <div id="note"><br>            <h2><br>            <strong>6</strong><br>            月节日<br>            </h2><br>            <p>端午节：6月4日至6日放假3天。</p><br>        </div><br>    </div><br></body><br></html>
       
     </div>
     <footer>
